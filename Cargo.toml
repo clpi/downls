@@ -1,0 +1,29 @@
+[package]
+name = "rsp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { version = "1.0.94", features = ["backtrace"] }
+chrono = { version = "0.4.39", features = ["serde"] }
+crossbeam-channel = "0.5.14"
+futures = "0.3.31"
+indexmap = { version = "2.7.0", features = ["serde"] }
+nanoid = "0.4.0"
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = { version = "1.0.133", features = ["indexmap"] }
+tokio = { version = "1.42.0", features = [
+  "rt",
+  "io-std",
+  "macros",
+  "rt-multi-thread",
+] }
+tower-lsp = { version = "0.20.0", features = [
+  # "async-codec-lite",
+  # "proposed",
+  # "runtime-agnostic",
+] }
+# lsp-types = { version = "0.97.0", features = ["proposed"] }
+tracing = { version = "0.1.41", features = ["attributes", "std"] }
+tracing-subscriber = "0.3.19"
+walkdir = "2.5.0"
